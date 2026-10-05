@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="900" viewBox="0 0 1800 900">
+<title>ER-модель бібліотеки</title>
+<desc>Сутності, атрибути та кардинальності автоматично прочитано з diagram.mmd.</desc>
+<style>text{font-family:Arial,DejaVu Sans,sans-serif;fill:#152b40} .edge{stroke:#486477;stroke-width:2;stroke-dasharray:6 4;fill:none} .field{font-size:16px} .small{font-size:14px} .card{font-size:18px;font-weight:bold}</style>
+<rect width="1800" height="900" fill="#fff"/>
+<path class="edge" d="M590 170 L390 170"/>
+<text x="560" y="195" class="card" text-anchor="middle">0..*</text>
+<text x="420" y="195" class="card" text-anchor="middle">0..*</text>
+<text x="490.0" y="154" class="small" text-anchor="middle">авторство</text>
+<path class="edge" d="M1000 170 L1200 170"/>
+<text x="1030" y="195" class="card" text-anchor="middle">1</text>
+<text x="1170" y="195" class="card" text-anchor="middle">0..*</text>
+<text x="1100.0" y="154" class="small" text-anchor="middle">примірники</text>
+<path class="edge" d="M570 710 L950 710"/>
+<text x="600" y="735" class="card" text-anchor="middle">1</text>
+<text x="920" y="735" class="card" text-anchor="middle">0..*</text>
+<text x="760.0" y="694" class="small" text-anchor="middle">видачі</text>
+<path class="edge" d="M1470 276 L1470 520"/>
+<text x="1484" y="304" class="card" text-anchor="start">1</text>
+<text x="1484" y="505" class="card" text-anchor="start">0..*</text>
+<text x="1484" y="398.0" class="field" text-anchor="start">історія видач</text>
+<rect x="590" y="90" width="410" height="186" rx="5" fill="#f7fafc" stroke="#345a73" stroke-width="2"/>
+<path d="M590 138H1000" stroke="#345a73"/>
+<text x="606" y="121" class="card" text-anchor="start">Book</text>
+<text x="602" y="167" class="small" text-anchor="start">UUID</text>
+<text x="688" y="167" class="field" text-anchor="start">book_id</text>
+<text x="862" y="167" class="small" text-anchor="start">PK</text>
+<text x="988" y="120" class="small" text-anchor="end">окреме видання</text>
+<path d="M590 184H1000" stroke="#cedae2"/>
+<text x="602" y="213" class="small" text-anchor="start">string</text>
+<text x="688" y="213" class="field" text-anchor="start">title</text>
+<text x="862" y="213" class="small" text-anchor="start"></text>
+<path d="M590 230H1000" stroke="#cedae2"/>
+<text x="602" y="259" class="small" text-anchor="start">int</text>
+<text x="688" y="259" class="field" text-anchor="start">publication_year</text>
+<text x="862" y="259" class="small" text-anchor="start"></text>
+<rect x="40" y="90" width="350" height="140" rx="5" fill="#f7fafc" stroke="#345a73" stroke-width="2"/>
+<path d="M40 138H390" stroke="#345a73"/>
+<text x="56" y="121" class="card" text-anchor="start">Author</text>
+<text x="52" y="167" class="small" text-anchor="start">UUID</text>
+<text x="138" y="167" class="field" text-anchor="start">author_id</text>
+<text x="312" y="167" class="small" text-anchor="start">PK</text>
+<path d="M40 184H390" stroke="#cedae2"/>
+<text x="52" y="213" class="small" text-anchor="start">string</text>
+<text x="138" y="213" class="field" text-anchor="start">full_name</text>
+<text x="312" y="213" class="small" text-anchor="start"></text>
+<rect x="1200" y="90" width="550" height="186" rx="5" fill="#f7fafc" stroke="#345a73" stroke-width="2"/>
+<path d="M1200 138H1750" stroke="#345a73"/>
+<text x="1216" y="121" class="card" text-anchor="start">Copy</text>
+<text x="1212" y="167" class="small" text-anchor="start">UUID</text>
+<text x="1298" y="167" class="field" text-anchor="start">copy_id</text>
+<text x="1472" y="167" class="small" text-anchor="start">PK</text>
+<path d="M1200 184H1750" stroke="#cedae2"/>
+<text x="1212" y="213" class="small" text-anchor="start">string</text>
+<text x="1298" y="213" class="field" text-anchor="start">inventory_number</text>
+<text x="1472" y="213" class="small" text-anchor="start">UK</text>
+<text x="1515" y="213" class="small" text-anchor="start">унікальний у бібліотеці</text>
+<path d="M1200 230H1750" stroke="#cedae2"/>
+<text x="1212" y="259" class="small" text-anchor="start">UUID</text>
+<text x="1298" y="259" class="field" text-anchor="start">book_id</text>
+<text x="1472" y="259" class="small" text-anchor="start">FK</text>
+<rect x="40" y="610" width="530" height="186" rx="5" fill="#f7fafc" stroke="#345a73" stroke-width="2"/>
+<path d="M40 658H570" stroke="#345a73"/>
+<text x="56" y="641" class="card" text-anchor="start">Member</text>
+<text x="52" y="687" class="small" text-anchor="start">UUID</text>
+<text x="138" y="687" class="field" text-anchor="start">member_id</text>
+<text x="312" y="687" class="small" text-anchor="start">PK</text>
+<path d="M40 704H570" stroke="#cedae2"/>
+<text x="52" y="733" class="small" text-anchor="start">string</text>
+<text x="138" y="733" class="field" text-anchor="start">full_name</text>
+<text x="312" y="733" class="small" text-anchor="start"></text>
+<path d="M40 750H570" stroke="#cedae2"/>
+<text x="52" y="779" class="small" text-anchor="start">string</text>
+<text x="138" y="779" class="field" text-anchor="start">email</text>
+<text x="312" y="779" class="small" text-anchor="start"></text>
+<rect x="950" y="520" width="800" height="324" rx="5" fill="#f7fafc" stroke="#345a73" stroke-width="2"/>
+<path d="M950 568H1750" stroke="#345a73"/>
+<text x="966" y="551" class="card" text-anchor="start">Loan</text>
+<text x="962" y="597" class="small" text-anchor="start">UUID</text>
+<text x="1048" y="597" class="field" text-anchor="start">loan_id</text>
+<text x="1222" y="597" class="small" text-anchor="start">PK</text>
+<path d="M950 614H1750" stroke="#cedae2"/>
+<text x="962" y="643" class="small" text-anchor="start">UUID</text>
+<text x="1048" y="643" class="field" text-anchor="start">member_id</text>
+<text x="1222" y="643" class="small" text-anchor="start">FK</text>
+<path d="M950 660H1750" stroke="#cedae2"/>
+<text x="962" y="689" class="small" text-anchor="start">UUID</text>
+<text x="1048" y="689" class="field" text-anchor="start">copy_id</text>
+<text x="1222" y="689" class="small" text-anchor="start">FK</text>
+<path d="M950 706H1750" stroke="#cedae2"/>
+<text x="962" y="735" class="small" text-anchor="start">datetime</text>
+<text x="1048" y="735" class="field" text-anchor="start">borrowed_at</text>
+<text x="1222" y="735" class="small" text-anchor="start"></text>
+<path d="M950 752H1750" stroke="#cedae2"/>
+<text x="962" y="781" class="small" text-anchor="start">datetime</text>
+<text x="1048" y="781" class="field" text-anchor="start">due_at</text>
+<text x="1222" y="781" class="small" text-anchor="start"></text>
+<text x="1265" y="781" class="small" text-anchor="start">після borrowed_at</text>
+<path d="M950 798H1750" stroke="#cedae2"/>
+<text x="962" y="827" class="small" text-anchor="start">datetime</text>
+<text x="1048" y="827" class="field" text-anchor="start">returned_at</text>
+<text x="1222" y="827" class="small" text-anchor="start"></text>
+<text x="1265" y="827" class="small" text-anchor="start">необов&#x27;язкове</text>
+</svg>

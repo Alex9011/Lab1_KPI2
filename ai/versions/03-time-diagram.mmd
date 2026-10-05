@@ -1,0 +1,35 @@
+erDiagram
+    direction TB
+    %% Дати UTC; інтервали одного Copy не перетинаються (spec C5).
+    Book }o..o{ Author : written_by
+    Book ||..o{ Copy : has
+    Member ||..o{ Loan : borrows
+    Copy ||..o{ Loan : loan_history
+
+    Book {
+        UUID book_id PK "окреме видання"
+        string title
+        int publication_year
+    }
+    Author {
+        UUID author_id PK
+        string full_name
+    }
+    Copy {
+        UUID copy_id PK
+        string inventory_number UK "унікальний у бібліотеці"
+        UUID book_id FK
+    }
+    Member {
+        UUID member_id PK
+        string full_name
+        string email
+    }
+    Loan {
+        UUID loan_id PK
+        UUID member_id FK
+        UUID copy_id FK
+        datetime borrowed_at
+        datetime due_at "після borrowed_at"
+        datetime returned_at "необов'язкове"
+    }

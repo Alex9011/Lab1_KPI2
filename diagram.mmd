@@ -1,5 +1,6 @@
 erDiagram
     direction TB
+    %% Дати UTC; інтервали одного Copy не перетинаються (spec C5).
     Book }o..o{ Author : written_by
     Book ||..o{ Copy : has
     Member ||..o{ Loan : borrows
@@ -29,6 +30,6 @@ erDiagram
         UUID member_id FK
         UUID copy_id FK
         datetime borrowed_at
-        datetime due_at
+        datetime due_at "після borrowed_at"
         datetime returned_at "необов'язкове"
     }
